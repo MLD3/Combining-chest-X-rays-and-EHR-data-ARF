@@ -1,5 +1,5 @@
 # Overview
-- This is the code repository for the manuscript ["Combining chest X-rays and EHR data using machine learning to diagnose acute respiratory failure"](https://arxiv.org/pdf/2108.12530.pdf). 
+This is the code repository for the manuscript ["Combining chest X-rays and EHR data using machine learning to diagnose acute respiratory failure"](https://arxiv.org/pdf/2108.12530.pdf). 
 
 ## Directory structures 
 

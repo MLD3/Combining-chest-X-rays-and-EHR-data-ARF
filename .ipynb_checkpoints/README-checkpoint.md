@@ -24,14 +24,14 @@ Required arguments:
 
 - **csv_file**: Path to metadata file.  
 - **checkpoint**: Path to file location where model checkpoints will be saved. 
-- **labels**: column name in the metadata files of the target classes. These can be separated by "|" (e.g., CHF|Pneumonia)
+- **labels**: column name in the metadata files of the classes. These can be separated by "|" (e.g., CHF|Pneumonia|COPD)
 - **rotate degrees**: degrees of rotation to use for random rotation in image augmentation. 
 - **disk**: if disk = 1, all images will be loaded into memory before training. Otherwise during training images will be fetched from disk. 
 - **mask** : mask = 1 if masked loss will be used (i.e., if there are missing labels). All missing labels in the metadata file should be set to -1. 
 - **early_stop**: early_stop = 1 if early stopping criteria will be used. Otherwise model will train to 3 epochs. 
 - **pretrain**: Whether or not to use an initialization. If pretrain is "yes", then ImageNet initialization will be used unless a pretrain file is specified. Otherwise, pretrain should be "random" 
-- **pretrain_file**: file path to pretrained model (i.e., source task model or pretrained model on MIMIC-CXr and CheXpert)
-- **pretrain_classes**: number of target labels pretrain model had 
+- **pretrain_file**: file path to pretrained model (i.e., pretrained model on MIMIC-CXR and CheXpert)
+- **pretrain_classes**: number of labels pretrain model had 
 - **freeze_all**: 1 or 0: whether or not to freeze all the layers but the classifier in the DenseNet
 - **loader_names** : list of split names (i.e., \["train", "valid", "test"\]). You do not have to include "test". 
 

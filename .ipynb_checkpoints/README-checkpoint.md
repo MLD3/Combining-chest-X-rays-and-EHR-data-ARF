@@ -16,7 +16,7 @@ Note: code to extract an AHRF cohort from MIMIC will be available soon.
 
 ## Running the code
 
-**Config file 
+**Config file**
 
 Pre-specified arguments can be set in config.json: 
 
@@ -36,7 +36,7 @@ Required arguments:
 - **loader_names** : list of split names (i.e., \["train", "valid", "test"\]). You do not have to include "test". 
 
 
-**Training a model 
+**Training a model** 
 
 The following exmple code will train a model using train.py. Each run requires that a model_name and model_type be specificied. There are pre-specified in the config file along with other parameters (described in further detail below). Models will be saved in the directory chexpoint/model_type/model_name. 
 
@@ -54,7 +54,7 @@ Other non-required arguments are:
 python train.py --model_type example_model_type --model_name example_model_name 
 #+END_SRC
 
-***Pretraining
+***Pretraining***
 
 To train a model on MIMIC-CXR and CheXpert, you'll want to use the **save_every**, **save_best_num**, and **optimizer** arguments. This will train on an ImageNet initialized model: 
 
@@ -62,6 +62,6 @@ To train a model on MIMIC-CXR and CheXpert, you'll want to use the **save_every*
 python train.py --model_type example_model_type --model_name example_model_name --save_every 4800 --save_best_num 10 --optimizer adam  
 #+END_SRC
 
-***Fine-tuning a model on the AHRF cohort: 
+***Fine-tuning a model on the AHRF cohort:***
 
 To train a DenseNet model after pretraining on either MIMIC-CXR/CheXpert, you'll need to specify the file location of the pretrained model in the config file, as well as the number of classes in the pretrained model. 

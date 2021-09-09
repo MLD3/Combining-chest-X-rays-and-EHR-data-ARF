@@ -50,20 +50,16 @@ Other non-required arguments are:
 - **save_best_num**, for pretraining on MIMIC-CXR and CheXpert. Number of top checkpoints to save (based on best AUROC performance on the validation set). Default is 1. 
 - **optimizer**: optimzier to use. Default is "sgd", but can also choose "adam" for pretraining on MIMIC-CXR and CheXpert. 
 
-#+BEGIN_SRC bash
-
+```bash
 python train.py --model_type example_model_type --model_name example_model_name 
-
-#+END_SRC
-
+```
 ***Pretraining***
 
 To train a model on MIMIC-CXR and CheXpert, you'll want to use the **save_every**, **save_best_num**, and **optimizer** arguments. This will train on an ImageNet initialized model: 
 
-#+BEGIN_SRC bash
+```bash
 python train.py --model_type example_model_type --model_name example_model_name --save_every 4800 --save_best_num 10 --optimizer adam  
-#+END_SRC
-
+```
 ***Fine-tuning a model on the AHRF cohort:***
 
 To train a DenseNet model after pretraining on either MIMIC-CXR/CheXpert, you'll need to specify the file location of the pretrained model in the config file, as well as the number of classes in the pretrained model. 

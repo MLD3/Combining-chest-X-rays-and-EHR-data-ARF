@@ -1,7 +1,7 @@
-## Overview
+# Overview
 - This is the code repository for the manuscript ["Combining chest X-rays and EHR data using machine learning to diagnose acute respiratory failure"](https://arxiv.org/pdf/2108.12530.pdf). 
 
-# Directory structures 
+## Directory structures 
 
 - dataset/ contains data loaders
 
@@ -9,14 +9,14 @@
 
 - checkpoint/ is where model checkpoints are saved
 
-# Download and Process the Data 
+## Download and Process the Data 
 Follow directions to download the [MIMIC-IV](https://physionet.org/content/mimiciv/0.4/), [MIMIC-CXR](https://physionet.org/content/mimic-cxr/2.0.0/), and [CheXpert](https://stanfordmlgroup.github.io/competitions/chexpert/) datasets
 
 Note: code to extract an AHRF cohort from MIMIC will be available soon. 
 
-# Running the code
+## Running the code
 
-** Config file 
+**Config file 
 
 Pre-specified arguments can be set in config.json: 
 
@@ -36,7 +36,7 @@ Required arguments:
 - **loader_names** : list of split names (i.e., \["train", "valid", "test"\]). You do not have to include "test". 
 
 
-** Training a model 
+**Training a model 
 
 The following exmple code will train a model using train.py. Each run requires that a model_name and model_type be specificied. There are pre-specified in the config file along with other parameters (described in further detail below). Models will be saved in the directory chexpoint/model_type/model_name. 
 

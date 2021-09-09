@@ -51,7 +51,9 @@ Other non-required arguments are:
 - **optimizer**: optimzier to use. Default is "sgd", but can also choose "adam" for pretraining on MIMIC-CXR and CheXpert. 
 
 #+BEGIN_SRC bash
+
 python train.py --model_type example_model_type --model_name example_model_name 
+
 #+END_SRC
 
 ***Pretraining***

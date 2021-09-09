@@ -3,11 +3,11 @@
 
 # Directory structures 
 
-dataset/ contains data loaders
+- dataset/ contains data loaders
 
-model/ contains model loaders
+- model/ contains model loaders
 
-checkpoint/ is where model checkpoints are saved
+- checkpoint/ is where model checkpoints are saved
 
 # Download and Process the Data 
 Follow directions to download the [MIMIC-IV](https://physionet.org/content/mimiciv/0.4/), [MIMIC-CXR](https://physionet.org/content/mimic-cxr/2.0.0/), and [CheXpert](https://stanfordmlgroup.github.io/competitions/chexpert/) datasets

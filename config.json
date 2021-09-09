@@ -1,0 +1,75 @@
+{  
+    'image' : { 
+        "image_model_name" : {
+                "csv_file": "",
+                "checkpoint": "./checkpoint/image/image_model_name",
+                "num_classes": 1,
+                "labels" : "pna_scale|chf_scale|copd_scale",
+                "rotate_degrees": 15,
+                "disk" : 0,
+                "mask" : 0,
+                "early_stop" : 1,
+                "threshold": [-1],
+                "pretrain" : "yes",
+                "freeze_all" : "yes", 
+               "pretrain_file" : "path_to_pretrained_model.pth.tar", 
+                'pretrain_classes' : 14,  
+                "loader_names" : ["train", "valid","test"],  
+        },
+        
+    }, 
+    'fused' : {
+        "combined_model_name" : {
+            "csv_file": "", 
+            "fuse" : 1, 
+                "checkpoint": "./checkpoint/fused/combined_model_name",
+               "learning_rate": 1e-4,
+               "num_epochs": 100,
+               "batch_size": 16,
+               "image_size" : 512,
+                "num_classes": 3,
+                "labels" : "pna_scale|chf_scale|copd_scale",
+               "threshold": [-1],
+               "plot_title" : "pna_scale",
+               "rotate_degrees": 15,
+               "pretrain" : "yes",
+                "freeze_all" : "yes", 
+                "data_directory" : "path_to_FIDDLE_directory/",
+                "s" : "path_to_FIDDLE_directory/S.npz",
+                "hour_directory" : "path_to_FIDDLE_directory/S.npz", 
+               "pretrain_file" : "path_to_pretrained_model",
+                "pretrain_classes" : 14,
+                "disk" : 0,
+                "mask" : 0,
+               "early_stop" : 1,
+               "loader_names" : ["train", "valid", "test"],  
+        },
+        
+    },
+     'ehr' : {
+         "ehr_model_name" : {
+            "csv_file": "", 
+            "fuse" : 1, 
+            "T": 0,
+            "checkpoint": "./checkpoint/ehr/ehr_model_name/",
+            "num_epochs": 60,
+            "num_classes": 3,
+            "labels" :  'pna_scale|chf_scale|copd_scale',
+            "graph_labels" : "Pneumonia|COPD|CHF",
+            "threshold": -1,
+            "plot_title" : "All Labels (COPD, PNA, CHF)",
+            "disk" : 0,
+            "mask" : 0,
+            "early_stop" : 1,
+            "n_layers" : 1, 
+           "data_directory" : "path_to_FIDDLE_directory/",
+            "s" : "path_to_FIDDLE_directory/S.npz",
+            "hour_directory" : "path_to_FIDDLE_directory/S.npz", 
+            "loader_names" : ["train", "valid", "test"], 
+         },
+
+    },
+}
+
+
+
